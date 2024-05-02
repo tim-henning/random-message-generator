@@ -16,5 +16,5 @@ const quoteStorage =  {
             "If not me, who? If not now, when?",
             "The best time to wear a striped sweater is all the time.",
             "Comfort can be dangerous. Comfort provides a floor but also a ceiling." ],
-    year: [],
+    year: ["2008", "2012", "2020", "2014", "2015", "1989", "1999", "1940", "2013", "1999"],
 }
