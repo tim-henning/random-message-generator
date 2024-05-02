@@ -1,5 +1,7 @@
 # Random Message Generator - A Codecademy project
 
+The program is part of my fullstack codecademy course.
+
 ## Overview
 
 This will be a simple project using Objects, Arrays, and loops to create a program that will output a random message everytime the program is run.
