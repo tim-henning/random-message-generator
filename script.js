@@ -20,7 +20,7 @@ const quoteStorage =  {
 }
 
 //Create a new array to store the output
-let quoteArr = [];
+/*let quoteArr = [];
 
 //Iterate over the object
 for(let item in quoteStorage) {
@@ -48,4 +48,19 @@ function formatQuote(_quoteItem) {
     console.log(formatted);
 }
 
-formatQuote(quoteArr);
+formatQuote(quoteArr);*/
+
+let randomQuoteIndex = generateRandomNumber(quoteStorage.quote.length);
+let randomNameIndex = generateRandomNumber(quoteStorage.name.length);
+let randomYearIndex = generateRandomNumber(quoteStorage.year.length);
+
+let quote = quoteStorage.quote[randomQuoteIndex];
+let name = quoteStorage.name[randomNameIndex];
+let year = quoteStorage.year[randomYearIndex];
+
+function formatQuote(quote, name, year) {
+    console.log(quote);
+    console.log(year + ", " + name);
+}
+
+formatQuote(quote, name, year);
