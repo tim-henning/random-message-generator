@@ -1,6 +1,6 @@
 // Generates a random number to iterate choose a random number in the array
 function generateRandomNumber(num) {
-    return Math.floor(Math.random * num);
+    return Math.floor(Math.random() * num);
 }
 
 // The object containing our arrays
@@ -16,5 +16,36 @@ const quoteStorage =  {
             "If not me, who? If not now, when?",
             "The best time to wear a striped sweater is all the time.",
             "Comfort can be dangerous. Comfort provides a floor but also a ceiling." ],
-    year: ["2008", "2012", "2020", "2014", "2015", "1989", "1999", "1940", "2013", "1999"],
+    year: ["2008", "2012", "2020", "2014", "2015", "1989", "1999", "1940", "2013", "1999"]
 }
+
+//Create a new array to store the output
+let quoteArr = [];
+
+//Iterate over the object
+for(let item in quoteStorage) {
+    let itemIdx = generateRandomNumber(quoteStorage[item].length)
+
+    //Check for different cases
+    switch(item) {
+        case 'name':
+            quoteArr.push(quoteStorage[item][itemIdx])
+            break
+        case 'quote':
+            quoteArr.push(quoteStorage[item][itemIdx])
+            break
+        case 'year':
+            quoteArr.push(quoteStorage[item][itemIdx])
+            break
+        default:
+            quoteArr.push("We are all out of inspirational quotes today, sorry.")
+    }
+}
+
+//Format the quote in the desired format
+function formatQuote(_quoteItem) {
+    let formatted = quoteArr.join('\n');
+    console.log(formatted);
+}
+
+formatQuote(quoteArr);
