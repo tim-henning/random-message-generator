@@ -18,49 +18,18 @@ const quoteStorage =  {
             "Comfort can be dangerous. Comfort provides a floor but also a ceiling." ],
     year: ["2008", "2012", "2020", "2014", "2015", "1989", "1999", "1940", "2013", "1999"]
 }
-
-//Create a new array to store the output
-/*let quoteArr = [];
-
-//Iterate over the object
-for(let item in quoteStorage) {
-    let itemIdx = generateRandomNumber(quoteStorage[item].length)
-
-    //Check for different cases
-    switch(item) {
-        case 'name':
-            quoteArr.push(quoteStorage[item][itemIdx])
-            break
-        case 'quote':
-            quoteArr.push(quoteStorage[item][itemIdx])
-            break
-        case 'year':
-            quoteArr.push(quoteStorage[item][itemIdx])
-            break
-        default:
-            quoteArr.push("We are all out of inspirational quotes today, sorry.")
-    }
-}
-
-//Format the quote in the desired format
-function formatQuote(_quoteItem) {
-    let formatted = quoteArr.join('\n');
-    console.log(formatted);
-}
-
-formatQuote(quoteArr);*/
-
+//Randomly select one item from each array
 let randomQuoteIndex = generateRandomNumber(quoteStorage.quote.length);
 let randomNameIndex = generateRandomNumber(quoteStorage.name.length);
 let randomYearIndex = generateRandomNumber(quoteStorage.year.length);
-
+//Store the randomly selected item in a new variable
 let quote = quoteStorage.quote[randomQuoteIndex];
 let name = quoteStorage.name[randomNameIndex];
 let year = quoteStorage.year[randomYearIndex];
-
+//format the variable to the desired format
 function formatQuote(quote, name, year) {
     console.log(quote);
     console.log(year + ", " + name);
 }
-
+//Call the function
 formatQuote(quote, name, year);
